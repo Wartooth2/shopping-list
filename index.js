@@ -21,5 +21,15 @@ function lineThroughItem(){
 
 	})
 }
+
+function deleteListItem(){
+	$('.shopping-list').on('click', '.shopping-item-delete', function(e){
+		e.preventDefault();
+		$(e.target).closest('li').remove();
+	})
+}
+
+
 $(createShoppingList)
 $(lineThroughItem)
+$(deleteListItem)
